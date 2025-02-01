@@ -7,7 +7,7 @@ import numpy as np
 # cap = cv2.VideoCapture(1)
 
 # capturar video mp4
-cap = cv2.VideoCapture("video.mp4")
+cap = cv2.VideoCapture("corte.mp4")
 
 # model = YOLO("yolov8n.pt")
 model = YOLO("runs/detect/train7/weights/best.pt")
@@ -21,7 +21,7 @@ class_points = defaultdict(list)
 
 while True:
     success, img = cap.read()
-    img = cv2.resize(img, (800, 600))
+    img = cv2.resize(img, (700, 480))
 
     if success:
         if seguir:
