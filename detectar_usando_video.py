@@ -66,7 +66,7 @@ cv2.destroyAllWindows()
 print("desligando")
 
 
-
+# save points to file
 with open("points.txt", "w") as arquivo:
     classes = list(class_points.keys())
     arquivo.write("\t".join(classes) + "\n")
