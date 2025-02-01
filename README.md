@@ -13,7 +13,7 @@ pip install ultralitics
 ```
 
 ### Treinamento
-Para treinar, acompanhe o vídeo e use o arquivo "train_among_v8.py"
+Para treinar, acompanhe o vídeo e use o arquivo "train_v8.py"
 
 ## Testando
 Para testar, se quiser fazer o rastreio coloque a variavel "seguir" em True
@@ -29,7 +29,3 @@ Neste caso configure o tamanho da tela no campo "size" da wincap e ajuste o offs
 
 Também é possível capturar passando o nome da janela que deseja usar (porém nem sempre funciona)
 
-
-Valeuuu
-
-[!["Treinando Redes Neurais Com Imagens Próprias"](https://img.youtube.com/vi/KV5lszcKuiE/0.jpg)](https://www.youtube.com/watch?v=KV5lszcKuiE)
