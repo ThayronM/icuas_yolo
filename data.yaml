@@ -3,11 +3,11 @@ val: ../valid/images
 test: ../test/images
 
 nc: 4
-names: ['Ball', 'Field', 'Red Robot', 'Yellow Robot']
+names: ['Ball', 'Blue Robot', 'Field', 'Yellow Robot']
 
 roboflow:
   workspace: models-bpjxv
-  project: iquas-article
-  version: 4
+  project: icuas-2025
+  version: 1
   license: CC BY 4.0
-  url: https://universe.roboflow.com/models-bpjxv/iquas-article/dataset/4
+  url: https://universe.roboflow.com/models-bpjxv/icuas-2025/dataset/1

@@ -22,7 +22,7 @@ wincap = WindowCapture(size=(800, 600), origin=(offset_x, offset_y))
 # model = YOLO("yolov8n.pt")
 
 # Usa modelo treinado com Among
-model = YOLO("runs/detect/train3/weights/best.pt")
+model = YOLO("runs/detect/train10/weights/best.pt")
 
 track_history = defaultdict(lambda: [])
 seguir = True

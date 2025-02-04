@@ -7,10 +7,10 @@ import numpy as np
 # cap = cv2.VideoCapture(1)
 
 # capturar video mp4
-cap = cv2.VideoCapture("RealSense_trimmed.mp4")
+cap = cv2.VideoCapture("Yolo.mp4")
 
 # model = YOLO("yolov8n.pt")
-model = YOLO("runs/detect/train12/weights/best.pt")
+model = YOLO("runs/detect/train10/weights/best.pt")
 
 
 track_history = defaultdict(lambda: [])
@@ -77,8 +77,8 @@ while True:
                         print(f"Classe: {classe}, x: {x_mm:.3f}, y: {y_mm:.3f}")   
                         
                     
-                    if classe == "Red Robot":
-                        print(f'{points[classe.index("Red Robot")]}')
+                    if classe == "Blue Robot":
+                        print(f'{points[classe.index("Blue Robot")]}')
                         x_mm = (x - x_ref) * 1500 / w_ref
                         y_mm = (y - y_ref) * 1300 / h_ref 
                         print(f"Classe: {classe}, x: {x_mm:.3f}, y: {y_mm:.3f}")
@@ -93,7 +93,7 @@ while True:
                     
                     
                     # Adicionando os pontos no dicionário por classe
-                    if classe in ["Yellow Robot", "Red Robot", "Ball"] and 'w_ref' in locals():
+                    if classe in ["Yellow Robot", "Blue Robot", "Ball"] and 'w_ref' in locals():
                         x_mm = (x - x_ref) * 1500 / w_ref
                         y_mm = (y - y_ref) * 1300 / h_ref
                         class_points_mm[classe].append((float(x_mm), float(y_mm)))  # Salva em mm

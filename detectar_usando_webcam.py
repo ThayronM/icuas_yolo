@@ -20,7 +20,7 @@ cap = cv2.VideoCapture(1)
 # YOLOv8x	640	    53.9	479.1	    3.53	    68.2	257.8
 
 # model = YOLO("yolov8n.pt")
-model = YOLO("runs/detect/train3/weights/best.pt")
+model = YOLO("runs/detect/train10/weights/best.pt")
 
 
 track_history = defaultdict(lambda: [])
