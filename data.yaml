@@ -8,6 +8,6 @@ names: ['Ball', 'Field', 'Red Robot', 'Yellow Robot']
 roboflow:
   workspace: models-bpjxv
   project: iquas-article
-  version: 3
+  version: 4
   license: CC BY 4.0
-  url: https://universe.roboflow.com/models-bpjxv/iquas-article/dataset/3
+  url: https://universe.roboflow.com/models-bpjxv/iquas-article/dataset/4
