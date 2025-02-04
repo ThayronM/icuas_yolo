@@ -23,7 +23,7 @@ for nome_classe, pontos_classe in pontos.items():
     if pontos_classe:  
         x = [p[0] for p in pontos_classe]
         y = [p[1] for p in pontos_classe]
-        plt.plot(x, y, marker='o', label=nome_classe)
+        plt.scatter(x, y, marker='o', label=nome_classe)
 
 plt.legend()
 plt.xlabel("Coordenada X")
