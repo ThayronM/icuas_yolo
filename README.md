@@ -21,5 +21,3 @@ Para desenhar o rastreio coloque a variavel "deixar_rastro" em True
 
 ### Testando com WebCam/video
 Basta executar video_processor.py
-
-
