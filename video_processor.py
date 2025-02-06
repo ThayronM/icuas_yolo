@@ -63,7 +63,7 @@ class VideoProcessor:
                         y_ref = y - (h / 2)
                         w_ref = w
                         h_ref = h
-                        self.field_reference = (x, y, w_ref, h_ref)
+                        self.field_reference = (x_ref, y_ref, w_ref, h_ref)
 
                     if classe in ["Yellow Robot", "Blue Robot", "Ball"] and self.field_reference:
                         x_ref, y_ref, w_ref, h_ref = self.field_reference
@@ -98,22 +98,24 @@ class VideoProcessor:
 
     def save_points(self, filename):
         with open(filename, "w") as arquivo:
-            classes = list(self.class_points.keys())
+            classes = list(self.class_points_mm.keys())  # Usar os pontos convertidos para mm
             arquivo.write("\t".join(classes) + "\n")
-            max_len = max(len(points) for points in self.class_points.values()) if self.class_points else 0
+            max_len = max(len(points) for points in self.class_points_mm.values()) if self.class_points_mm else 0
 
             for i in range(max_len):
                 linha = []
                 for classe in classes:
-                    if i < len(self.class_points[classe]):
-                        linha.append(f"{self.class_points[classe][i]}")
+                    if i < len(self.class_points_mm[classe]):
+                        linha.append(f"{self.class_points_mm[classe][i]}")
                     else:
                         linha.append("")
                 arquivo.write("\t".join(linha) + "\n")
-        print(f"Pontos salvos em {filename}")
+        
+        print(f"Pontos convertidos para mm salvos em {filename}")
+
 
 
 if __name__ == "__main__":
-    video_processor = VideoProcessor("Yolo.mp4", "runs/detect/train10/weights/best.pt")
+    video_processor = VideoProcessor("Yolo_rotated.mp4", "runs/detect/train13/weights/best.pt")
     video_processor.run()
     video_processor.save_points("output/points.txt")
