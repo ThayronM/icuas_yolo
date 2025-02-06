@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+# original
 with open("output/points.txt", "r") as arquivo:
     linhas = arquivo.readlines()
 nomes_classes = linhas[0].strip().split("\t")  
@@ -66,9 +67,7 @@ plt.show()
 
 
 #########################################################################
-import matplotlib.pyplot as plt
-import numpy as np
-
+# em função do tempo(frames)
 # Carregar os dados do arquivo points.txt
 with open("output/points.txt", "r") as arquivo:
     linhas = arquivo.readlines()
