@@ -71,6 +71,7 @@ class VideoProcessor:
                         y_mm = (y - y_ref) * 1300 / h_ref
                         self.class_points_mm[classe].append((float(x_mm), float(y_mm)))
 
+
             except:
                 pass
 
@@ -100,7 +101,7 @@ class VideoProcessor:
         with open(filename, "w") as arquivo:
             classes = list(self.class_points_mm.keys())  # Usar os pontos convertidos para mm
             arquivo.write("\t".join(classes) + "\n")
-            max_len = max(len(points) for points in self.class_points_mm.values()) if self.class_points_mm else 0
+            max_len = max(len(points) for points in self.class_points_mm.values()) if self.class_points_mm else 0 # Pegar o maior comprimento de pontos para preencher com vazio
 
             for i in range(max_len):
                 linha = []
