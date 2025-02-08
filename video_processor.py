@@ -42,9 +42,9 @@ class VideoProcessor:
         for result in results:
             img = result.plot()
             try:
-                boxes = result.boxes.xywh.cpu().numpy()
-                track_ids = result.boxes.id.int().cpu().tolist()
-                class_idxs = result.boxes.cls.cpu().tolist()
+                boxes = result.boxes.xywh.cuda().numpy()
+                track_ids = result.boxes.id.int().cuda().tolist()
+                class_idxs = result.boxes.cls.cuda().tolist()
 
                 for box, track_id, class_idx in zip(boxes, track_ids, class_idxs):
                     x, y, w, h = box

@@ -1,23 +1,23 @@
-# Treinando YoloV8
-Fazendo um treinamento da YoloV8
+# Training YoloV8
+Doing a YoloV8 training
 
-## Treinando
-### Instalando pytorch com CUDA para uso da GPU
-Se você tem uma placa de vídeo compatível com CUDA, primeiro instale o PyTorch com CUDA neste link
+## Training
+### Installing pytorch with CUDA for GPU use
+If you have a CUDA-compatible video card, first install PyTorch with CUDA from this link
 
 [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
 
-### Instale o Yolo
+### Install Yolo
 ```
 pip install ultralitics
 ```
 
-### Treinamento
-Para treinar, acompanhe o vídeo e use o arquivo "train_v8.py"
+### Training
+To train, follow the video and use the file “train_v8.py”
 
-## Testando
-Para testar, se quiser fazer o rastreio coloque a variavel "seguir" em True
-Para desenhar o rastreio coloque a variavel "deixar_rastro" em True
+## Testing
+To test, if you want to trace, set the “follow” variable to True
+To draw the trace, set the “leave_trace” variable to True
 
-### Testando com WebCam/video
-Basta executar video_processor.py
+### Testing with WebCam/video
+Just run video_processor.py
